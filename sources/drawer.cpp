@@ -37,6 +37,14 @@ void Drawer::addSeries(int n)
 			cout << "Series " << n << " successfully removed!" << endl;
 		}
 	}
+	else if (n == (int)cat.size() + 1)
+	{
+		for (int i = 0; i < (int)cat.size(); i++)
+		{
+			series.insert(i+1);
+		}
+		cout << "All series were succesfully added !" << endl;
+	}
 	else
 	{
 		cout << "That series doesn't exist. Please pick another one." << endl;
@@ -123,6 +131,7 @@ void Drawer::menu()
 	{
 		cout << " " << i + 1 << ".\t" << cat[i]->bracketName() << endl;
 	}
+	cout << " " << cat.size()+1	 << ".\t" << "[All]" << endl;
 
 	cout << endl;
 
